@@ -1,0 +1,6 @@
+<div class="container">
+    <app-workout-form (onNewElement)="addNewElement($event)"></app-workout-form>
+    <hr/>
+    <app-workout-list [workouts]="workoutList" (onElementDelete)="elementDelete($event)"></app-workout-list>
+    <!-- (onElementToggle)="elementToggle($event)" -->
+</div>

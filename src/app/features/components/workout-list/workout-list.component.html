@@ -1,0 +1,33 @@
+<div class="col-12">
+    <ul class="list-group">
+      <li *ngFor="let workout of workouts" class="list-group-item">
+      <div class="col-12 row">
+        <div class="col-2">
+          <span class="badge badge-primary mr-2 col-12"
+                [ngClass]="{'badge-danger' : !workout.done, 'badge-success' : workout.done}">
+            {{workout.done ? 'Done' : 'Not Done' }}
+          </span>
+        </div>
+
+        <div class="col-6">
+          <span>  
+            {{workout.text}}
+          </span>
+        </div>
+
+        <div class="col-4 text-right">
+          <button type="submit" (click)="onDelete(workout)" class="btn btn-primary">
+            DELETE WORKOUT
+          </button>
+        </div>
+      </div>
+        <app-workout-exercise-form [work]="workout" (onNewExcercise)="addNewExercise($event)" ></app-workout-exercise-form>
+        <app-workout-exercise-list [work]="workout" (onExerciseToggle)="exerciseToggle($event)" (onExerciseDelete)="exerciseDelete($event)">
+
+        </app-workout-exercise-list> 
+        
+      </li>
+    </ul>
+  
+  </div>
+  

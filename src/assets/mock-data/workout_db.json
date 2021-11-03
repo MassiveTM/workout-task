@@ -1,0 +1,36 @@
+{
+  "workouts": [
+    {
+      "text": "Prova aggiunta",
+      "done": false,
+      "id": 1,
+      "exercises": [
+        {
+          "text": "Esercizio 1",
+          "done": true,
+          "id": 1
+        },
+        {
+          "text": "Esercizio 3",
+          "done": false,
+          "id": 3
+        },
+        {
+          "text": "prova",
+          "done": true,
+          "id": 3
+        },
+        {
+          "text": "proviamo ad aggiubngere",
+          "done": true,
+          "id": 4
+        }
+      ]
+    },
+    {
+      "text": "Workout test 2",
+      "done": false,
+      "id": 2
+    }
+  ]
+}

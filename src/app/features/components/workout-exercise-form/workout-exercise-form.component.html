@@ -1,0 +1,29 @@
+
+<li class="list-group-item mt-2">
+<form [formGroup]="myFormValidator" (submit)="addExercise()">
+
+    <div class="form-group col-12 row" style="margin-top: 0.5rem">
+      
+        <div class="col-md-10">
+          <input id="textInput" type="text" name="textInput"
+                 placeholder="Add Exercise" autocomplete="off"
+                 class="form-control"
+                 formControlName="element" /> <!--[(ngModel)]="element"-->
+  
+            <span *ngIf="myFormValidator.get('element')!.invalid && myFormValidator.get('element')!.errors!.required"
+              class="alert-danger">
+              Invalid input
+            </span>
+        </div>
+
+        <div class="col-md-2 text-right">
+            <button type="submit" [disabled]="myFormValidator.invalid" class="btn btn-primary">
+                Save
+            </button>
+        </div>
+       
+  
+      </div>
+
+  </form>
+</li>

@@ -1,0 +1,4 @@
+Utility info
+
+json-server --watch ./src/assets/mock-data/workout_db.json --port 3000
+

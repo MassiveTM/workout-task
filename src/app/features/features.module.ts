@@ -8,7 +8,6 @@ import { WorkoutFormComponent } from './components/workout-form/workout-form.com
 import { ServiceModule } from './services/service.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { WorkoutComponent } from './containers/workout/workout.component';
-
 @NgModule({
   declarations: [
     WorkoutComponent,

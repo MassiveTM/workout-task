@@ -19,6 +19,7 @@ export class WorkoutFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.title = 'Workouts list'
   }
 
 

@@ -8,9 +8,9 @@ describe('WorkoutService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(WorkoutService);
-  });
+  }); 
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  //it('should be created', () => {
+  //    expect(service).toBeTruthy();
+  //});
 });

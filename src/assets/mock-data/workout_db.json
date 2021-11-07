@@ -1,36 +1,60 @@
 {
   "workouts": [
     {
-      "text": "Prova aggiunta",
+      "text": "Workout 1 Sample",
       "done": false,
       "id": 1,
       "exercises": [
         {
-          "text": "Esercizio 1",
+          "text": "Exercise 2",
           "done": true,
-          "id": 1
+          "id": 2
         },
         {
-          "text": "Esercizio 3",
+          "text": "Exercise 3",
           "done": false,
           "id": 3
-        },
-        {
-          "text": "prova",
-          "done": true,
-          "id": 3
-        },
-        {
-          "text": "proviamo ad aggiubngere",
-          "done": true,
-          "id": 4
         }
       ]
     },
     {
-      "text": "Workout test 2",
+      "text": "Workout 2 Sample",
+      "done": true,
+      "id": 2,
+      "exercises": [
+        {
+          "text": "Exercise A",
+          "done": true,
+          "id": 1
+        },
+        {
+          "text": "Exercise B",
+          "done": true,
+          "id": 2
+        }
+      ]
+    },
+    {
+      "text": "Workout 3 Sample",
       "done": false,
-      "id": 2
+      "id": 3,
+      "exercises": [
+        {
+          "text": "Exercise X",
+          "done": true,
+          "id": 1
+        },
+        {
+          "text": "Exercise Y",
+          "done": false,
+          "id": 2
+        },
+        {
+          "text": "Exercise Z",
+          "done": false,
+          "id": 3
+        }
+      ]
     }
   ]
 }

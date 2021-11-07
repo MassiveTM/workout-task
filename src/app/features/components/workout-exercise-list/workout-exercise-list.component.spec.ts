@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ServiceModule } from '../../services/service.module';
 
 import { WorkoutExerciseListComponent } from './workout-exercise-list.component';
 
@@ -8,6 +9,9 @@ describe('WorkoutExerciseListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        ServiceModule 
+      ],
       declarations: [ WorkoutExerciseListComponent ]
     })
     .compileComponents();
@@ -19,7 +23,4 @@ describe('WorkoutExerciseListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

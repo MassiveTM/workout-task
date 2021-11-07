@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Workout } from './../../models/workout';
-import { Exercise } from './../../models/exercise';
 import { WorkoutService } from '../../services/workout.service';
 import { catchError } from 'rxjs/operators';
 
@@ -12,28 +11,15 @@ import { catchError } from 'rxjs/operators';
 })
 export class WorkoutListComponent implements OnInit {
 
-  //@Output() onElementToggle: EventEmitter<Workout> = new EventEmitter<Workout>();
   @Output() onElementDelete: EventEmitter<Workout> = new EventEmitter<Workout>();
 
   @Input() workouts: Workout[] = [];
 
-  public title: string = '';
-
   constructor(private workoutService : WorkoutService) { 
-    this.title = 'Title 1';
   }
 
   ngOnInit(): void {
   }
-
-   /** onToggle
-   * Funzione per cambiare lo stato della riga
-   */
-  //public onToggle(workout: Workout) {
-  // workout.done = !workout.done;
-  // Emetto il valore
-  // this.onElementToggle.emit(workout);
-  //}
 
   public onDelete(workout: Workout){
     this.onElementDelete.emit(workout);
@@ -41,16 +27,17 @@ export class WorkoutListComponent implements OnInit {
 
   public exerciseToggle(workout: Workout) {
 
+    //AUTO SET DONE WORKOUT
     var allWarkoutDone = true;
     for(var i = 0; i < workout.exercises.length ; i++) {
       if(workout.exercises[i].done == false){
         allWarkoutDone = false;
+        break;
       }
     }
-
     workout.done = allWarkoutDone;
-    
-    // Persisto e aggiorno a lista
+
+    // update the workout with the new exercise
     this.workoutService.updateWorkout(workout)
       .pipe(
         catchError(err => {
@@ -68,12 +55,12 @@ export class WorkoutListComponent implements OnInit {
       });
   }
 
+  //if i want to delete an exercise, I'll update the same workout
   public exerciseDelete(workout: Workout) {
-
     this.exerciseToggle(workout)
-  
   }
 
+  //if i want to add a new exercise, I'll update the same workout
   public addNewExercise(workout: Workout){
     this.exerciseToggle(workout);
   }
